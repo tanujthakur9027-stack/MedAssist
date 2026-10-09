@@ -16,7 +16,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 import streamlit as st
 from PIL import Image
-import pytesseract
+
+try:
+    import pytesseract
+except ImportError:
+    pytesseract = None
 
 # ═══ MEDICAL TESTS DATABASE ═══
 @st.cache_data
