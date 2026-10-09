@@ -1,0 +1,196 @@
+"""
+Medical Report Analyzer
+Extracts text from PDF/Image → analyzes in English → returns structured output.
+"""
+
+import os
+import re
+import html
+
+try:
+    import pdfplumber
+    PDF_AVAILABLE = True
+except ImportError:
+    PDF_AVAILABLE = False
+
+try:
+    import pytesseract
+    from PIL import Image
+    OCR_AVAILABLE = True
+except ImportError:
+    OCR_AVAILABLE = False
+from core.llm import LLMManager as FreeLLM
+
+from translation_agent import translate_text
+
+# Windows Tesseract path (optional)
+TESSERACT_PATH = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+if os.path.exists(TESSERACT_PATH):
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
+
+llm = FreeLLM()
+
+
+def extract_from_pdf(pdf_path):
+    if not PDF_AVAILABLE:
+        return "PDF extraction error: pdfplumber not installed."
+    text = ""
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            for page in pdf.pages:
+                pt = page.extract_text()
+                if pt:
+                    text += pt + "\n"
+        return text.strip()
+    except Exception as e:
+        return f"PDF extraction error: {str(e)}"
+
+
+def extract_from_image(image_path):
+    if not OCR_AVAILABLE:
+        return "OCR error: pytesseract or PIL not installed."
+    try:
+        image = Image.open(image_path)
+        text = pytesseract.image_to_string(image)
+        return text.strip()
+    except Exception as e:
+        return f"OCR error: {str(e)}"
+
+
+def clean_text(raw_text):
+    text = re.sub(r'\n+', '\n', raw_text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+
+def analyze_report(report_text):
+    """
+    Analyze report in English with strict source grounding.
+    Returns structured dict with English analysis.
+    """
+    if len(report_text) < 20:
+        return {
+            "summary": "Could not read the report properly. Please upload a clearer image or PDF.",
+            "problems": [],
+            "recommendations": [],
+            "diet_lifestyle": [],
+            "when_to_see_doctor": "Please consult a doctor with the original report.",
+            "raw_response": ""
+        }
+
+    prompt = f"""You are a medical report assistant for rural patients.
+You have ONLY the following extracted report text. You MUST NOT use outside knowledge.
+If something is not in the report, say "Not mentioned in report."
+
+REPORT TEXT:
+\"\"\"{report_text[:3500]}\"\"\"
+
+Analyze the report and give output in this EXACT format:
+
+SUMMARY:
+[2-3 simple sentences explaining what the report says]
+
+PROBLEMS FOUND:
+- [Problem 1: e.g., Hemoglobin is low (10.2, normal is 12-16)]
+- [Problem 2: e.g., Blood sugar is high]
+- [If nothing abnormal: "No major abnormalities found in the report."]
+
+WHAT TO DO:
+- [Action 1: e.g., Eat iron-rich foods like spinach, lentils, jaggery]
+- [Action 2: e.g., Drink plenty of water]
+- [Action 3: e.g., Take prescribed medicines on time]
+
+DIET & LIFESTYLE:
+- [Diet tip 1]
+- [Diet tip 2]
+- [Lifestyle tip 1]
+
+WHEN TO SEE DOCTOR:
+[Clear guidance on when to visit doctor urgently vs routine follow-up]
+
+IMPORTANT NOTE:
+[Only if report mentions medicines: list them with dosage. Otherwise say "No medicines mentioned in report."]
+
+If you are unsure about anything, say: "This is not clearly mentioned in the report."
+
+ANSWER:"""
+
+    response = llm.predict(prompt, temperature=0.3)
+    
+    # Parse sections
+    parsed = parse_sections(response)
+    parsed["raw_response"] = response
+    return parsed
+
+
+def parse_sections(text):
+    """Parse the LLM response into structured sections."""
+    sections = {
+        "summary": "",
+        "problems": [],
+        "recommendations": [],
+        "diet_lifestyle": [],
+        "when_to_see_doctor": "",
+        "raw_response": text
+    }
+    
+    current_key = None
+    lines = text.split('\n')
+    
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        
+        upper = line.upper()
+        if "SUMMARY:" in upper and len(upper) < 20:
+            current_key = "summary"
+            continue
+        elif "PROBLEM" in upper and "FOUND" in upper:
+            current_key = "problems"
+            continue
+        elif "WHAT TO DO" in upper:
+            current_key = "recommendations"
+            continue
+        elif "DIET" in upper and "LIFESTYLE" in upper:
+            current_key = "diet_lifestyle"
+            continue
+        elif "WHEN TO SEE DOCTOR" in upper:
+            current_key = "when_to_see_doctor"
+            continue
+        elif "IMPORTANT NOTE" in upper:
+            current_key = "important_note"
+            continue
+        
+        if current_key == "summary":
+            sections["summary"] += line + " "
+        elif current_key in ("problems", "recommendations", "diet_lifestyle"):
+            if line.startswith('-') or line.startswith('•') or re.match(r'^\d+\.', line):
+                clean = re.sub(r'^[-•\d\.\)\s]+', '', line).strip()
+                if clean:
+                    sections[current_key].append(clean)
+        elif current_key == "when_to_see_doctor":
+            sections["when_to_see_doctor"] += line + " "
+    
+    sections["summary"] = sections["summary"].strip()
+    sections["when_to_see_doctor"] = sections["when_to_see_doctor"].strip()
+    return sections
+
+
+def get_structured_analysis(report_text, language="en"):
+    """Full pipeline: clean → analyze (English) → translate if needed."""
+    cleaned = clean_text(report_text)
+    analysis = analyze_report(cleaned)
+    
+    # If non-English, translate all text fields
+    if language != "en":
+        for key in ["summary", "when_to_see_doctor", "raw_response"]:
+            if analysis.get(key):
+                analysis[key] = translate_text(analysis[key], target_lang=language)
+        
+        for key in ["problems", "recommendations", "diet_lifestyle"]:
+            if analysis.get(key):
+                analysis[key] = [translate_text(item, target_lang=language) for item in analysis[key]]
+    
+    analysis["language"] = language
+    return analysis

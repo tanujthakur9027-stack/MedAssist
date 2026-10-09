@@ -1,0 +1,351 @@
+Test Name,URL,Has Description,Has Why Done,Has Risks
+Acetaminophen Level,https://medlineplus.gov/lab-tests/acetaminophen-level/,False,True,True
+ADHD Screening,https://medlineplus.gov/lab-tests/adhd-screening/,False,True,True
+Albumin Blood Test,https://medlineplus.gov/lab-tests/albumin-blood-test/,False,True,True
+Acid-Fast Bacillus (AFB) Tests,https://medlineplus.gov/lab-tests/acid-fast-bacillus-afb-tests/,False,True,True
+Adrenocorticotropic Hormone (ACTH),https://medlineplus.gov/lab-tests/adrenocorticotropic-hormone-acth/,False,True,True
+Allergy Skin Test,https://medlineplus.gov/lab-tests/allergy-skin-test/,False,True,True
+Alkaline Phosphatase,https://medlineplus.gov/lab-tests/alkaline-phosphatase/,False,True,True
+Allergy Blood Test,https://medlineplus.gov/lab-tests/allergy-blood-test/,False,True,True
+Alcohol Use Screening Tests,https://medlineplus.gov/lab-tests/alcohol-use-screening-tests/,False,True,True
+Aldosterone Test,https://medlineplus.gov/lab-tests/aldosterone-test/,False,True,True
+Alpha-Fetoprotein (AFP) Test,https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-test/,False,True,True
+ALT Blood Test,https://medlineplus.gov/lab-tests/alt-blood-test/,False,True,True
+Alpha Fetoprotein (AFP) Tumor Marker Test,https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-tumor-marker-test/,False,True,True
+Alpha-1 Antitrypsin Testing,https://medlineplus.gov/lab-tests/alpha-1-antitrypsin-testing/,False,True,True
+Ammonia Levels,https://medlineplus.gov/lab-tests/ammonia-levels/,False,True,True
+Amylase Test,https://medlineplus.gov/lab-tests/amylase-test/,False,True,True
+Amniocentesis (amniotic fluid test),https://medlineplus.gov/lab-tests/amniocentesis-amniotic-fluid-test/,False,True,True
+ANA (Antinuclear Antibody) Test,https://medlineplus.gov/lab-tests/ana-antinuclear-antibody-test/,False,True,True
+Anion Gap Blood Test,https://medlineplus.gov/lab-tests/anion-gap-blood-test/,False,True,True
+Anoscopy,https://medlineplus.gov/lab-tests/anoscopy/,False,True,True
+Antibody Serology Tests,https://medlineplus.gov/lab-tests/antibody-serology-tests/,False,True,True
+Antineutrophil Cytoplasmic Antibodies (ANCA) Test,https://medlineplus.gov/lab-tests/antineutrophil-cytoplasmic-antibodies-anca-test/,False,True,True
+Antibiotic Sensitivity Test,https://medlineplus.gov/lab-tests/antibiotic-sensitivity-test/,False,True,True
+Anti-MÃ¼llerian Hormone Test,https://medlineplus.gov/lab-tests/anti-mullerian-hormone-test/,False,True,True
+Appendicitis Tests,https://medlineplus.gov/lab-tests/appendicitis-tests/,False,True,True
+AST Test,https://medlineplus.gov/lab-tests/ast-test/,False,True,True
+Arterial Blood Gas (ABG) Test,https://medlineplus.gov/lab-tests/arterial-blood-gas-abg-test/,False,True,True
+At-Home Medical Tests,https://medlineplus.gov/lab-tests/at-home-medical-tests/,False,False,False
+Autism Spectrum Disorder (ASD) Screening,https://medlineplus.gov/lab-tests/autism-spectrum-disorder-asd-screening/,False,True,True
+Autoantibody Testing,https://medlineplus.gov/lab-tests/autoantibody-testing/,False,True,True
+Bacteria Culture Test,https://medlineplus.gov/lab-tests/bacteria-culture-test/,False,True,True
+Autonomic Testing,https://medlineplus.gov/lab-tests/autonomic-testing/,False,True,True
+Bacterial Vaginosis Test,https://medlineplus.gov/lab-tests/bacterial-vaginosis-test/,False,True,True
+Basic Metabolic Panel (BMP),https://medlineplus.gov/lab-tests/basic-metabolic-panel-bmp/,False,True,True
+Barium Swallow,https://medlineplus.gov/lab-tests/barium-swallow/,False,True,True
+Balance Tests,https://medlineplus.gov/lab-tests/balance-tests/,False,True,True
+BCR-ABL1 Genetic Test,https://medlineplus.gov/lab-tests/bcr-abl1-genetic-test/,False,True,True
+Beta 2 Microglobulin (B2M) Tumor Marker Test,https://medlineplus.gov/lab-tests/beta-2-microglobulin-b2m-tumor-marker-test/,False,True,True
+Bilirubin Blood Test,https://medlineplus.gov/lab-tests/bilirubin-blood-test/,False,True,True
+Bilirubin in Urine,https://medlineplus.gov/lab-tests/bilirubin-in-urine/,False,True,True
+Blood Alcohol Level,https://medlineplus.gov/lab-tests/blood-alcohol-level/,False,True,True
+Blood Glucose Test,https://medlineplus.gov/lab-tests/blood-glucose-test/,False,True,True
+Blood in Urine,https://medlineplus.gov/lab-tests/blood-in-urine/,False,True,True
+Blood Differential,https://medlineplus.gov/lab-tests/blood-differential/,False,True,True
+Blood Smear,https://medlineplus.gov/lab-tests/blood-smear/,False,True,True
+Bone Density Scan,https://medlineplus.gov/lab-tests/bone-density-scan/,False,True,True
+BRAF Genetic Test,https://medlineplus.gov/lab-tests/braf-genetic-test/,False,True,True
+Bone Marrow Tests,https://medlineplus.gov/lab-tests/bone-marrow-tests/,False,True,True
+Bronchoscopy and Bronchoalveolar Lavage (BAL),https://medlineplus.gov/lab-tests/bronchoscopy-and-bronchoalveolar-lavage-bal/,False,True,True
+BRCA Genetic Test,https://medlineplus.gov/lab-tests/brca-test/,False,True,True
+Breast Biopsy,https://medlineplus.gov/lab-tests/breast-biopsy/,False,True,True
+BUN (Blood Urea Nitrogen),https://medlineplus.gov/lab-tests/bun-blood-urea-nitrogen/,False,True,True
+Burn Evaluation,https://medlineplus.gov/lab-tests/burn-evaluation/,False,False,False
+C-Peptide Test,https://medlineplus.gov/lab-tests/c-peptide-test/,False,True,True
+C-Reactive Protein (CRP) Test,https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/,False,True,True
+CA 19-9 Blood Test (Pancreatic Cancer),https://medlineplus.gov/lab-tests/ca-19-9-blood-test-pancreatic-cancer/,False,True,True
+C. diff Testing,https://medlineplus.gov/lab-tests/c-diff-testing/,False,True,True
+CA-125 Blood Test (Ovarian Cancer),https://medlineplus.gov/lab-tests/ca-125-blood-test-ovarian-cancer/,False,True,True
+Calcium Blood Test,https://medlineplus.gov/lab-tests/calcium-blood-test/,False,True,True
+Calcitonin Test,https://medlineplus.gov/lab-tests/calcitonin-test/,False,True,True
+Calprotectin Stool Test,https://medlineplus.gov/lab-tests/calprotectin-stool-test/,False,True,True
+Carbon Dioxide (CO2) in Blood,https://medlineplus.gov/lab-tests/carbon-dioxide-co2-in-blood/,False,True,True
+Catecholamine Tests,https://medlineplus.gov/lab-tests/catecholamine-tests/,False,True,True
+Calcium in Urine Test,https://medlineplus.gov/lab-tests/calcium-in-urine-test/,False,True,True
+CCP Antibody Test,https://medlineplus.gov/lab-tests/ccp-antibody-test/,False,True,True
+CD4 Lymphocyte Count,https://medlineplus.gov/lab-tests/cd4-lymphocyte-count/,False,True,True
+CEA Test,https://medlineplus.gov/lab-tests/cea-test/,False,True,True
+Cerebrospinal Fluid (CSF) Analysis,https://medlineplus.gov/lab-tests/cerebrospinal-fluid-csf-analysis/,False,True,True
+Chickenpox and Shingles Tests,https://medlineplus.gov/lab-tests/chickenpox-and-shingles-tests/,False,True,True
+Ceruloplasmin Test,https://medlineplus.gov/lab-tests/ceruloplasmin-test/,False,True,True
+Celiac Disease Screening,https://medlineplus.gov/lab-tests/celiac-disease-screening/,False,True,True
+Chlamydia Test,https://medlineplus.gov/lab-tests/chlamydia-test/,False,True,True
+Chorionic Villus Sampling (CVS),https://medlineplus.gov/lab-tests/chorionic-villus-sampling-cvs/,False,True,True
+Cholesterol Levels,https://medlineplus.gov/lab-tests/cholesterol-levels/,False,True,True
+Chloride Blood Test,https://medlineplus.gov/lab-tests/chloride-blood-test/,False,True,True
+Chymotrypsin in Stool,https://medlineplus.gov/lab-tests/chymotrypsin-in-stool/,False,True,True
+Coagulation Factor Tests,https://medlineplus.gov/lab-tests/coagulation-factor-tests/,False,True,True
+Cognitive Testing,https://medlineplus.gov/lab-tests/cognitive-testing/,False,True,True
+Colposcopy,https://medlineplus.gov/lab-tests/colposcopy/,False,True,True
+Complement Blood Test,https://medlineplus.gov/lab-tests/complement-blood-test/,False,True,True
+Colorectal Cancer Screening Tests,https://medlineplus.gov/lab-tests/colorectal-cancer-screening-tests/,False,True,True
+Cold Stimulation Test,https://medlineplus.gov/lab-tests/cold-stimulation-test/,False,True,True
+Complete Blood Count (CBC),https://medlineplus.gov/lab-tests/complete-blood-count-cbc/,False,True,True
+Comprehensive Metabolic Panel (CMP),https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/,False,True,True
+Cortisol Test,https://medlineplus.gov/lab-tests/cortisol-test/,False,True,True
+Cord Blood Testing and Banking,https://medlineplus.gov/lab-tests/cord-blood-testing-and-banking/,False,False,True
+Creatine Kinase,https://medlineplus.gov/lab-tests/creatine-kinase/,False,True,True
+Creatinine Test,https://medlineplus.gov/lab-tests/creatinine-test/,False,True,True
+Concussion Tests,https://medlineplus.gov/lab-tests/concussion-tests/,False,True,True
+Cytomegalovirus (CMV) Tests,https://medlineplus.gov/lab-tests/cytomegalovirus-cmv-tests/,False,True,True
+CSF Immunoglobulin G (IgG) Index,https://medlineplus.gov/lab-tests/csf-immunoglobulin-g-igg-index/,False,True,True
+Crystals in Urine,https://medlineplus.gov/lab-tests/crystals-in-urine/,False,True,True
+D-Dimer Test,https://medlineplus.gov/lab-tests/d-dimer-test/,False,True,True
+Dental Exam,https://medlineplus.gov/lab-tests/dental-exam/,False,True,True
+Dengue Fever Test,https://medlineplus.gov/lab-tests/dengue-fever-test/,False,True,True
+Developmental and Behavioral Screening Tests,https://medlineplus.gov/lab-tests/developmental-and-behavioral-screening-tests/,False,True,True
+Depression Screening,https://medlineplus.gov/lab-tests/depression-screening/,False,True,True
+DHEA Sulfate Test,https://medlineplus.gov/lab-tests/dhea-sulfate-test/,False,True,True
+Differential Diagnosis,https://medlineplus.gov/lab-tests/differential-diagnosis/,False,False,False
+Down Syndrome Tests,https://medlineplus.gov/lab-tests/down-syndrome-tests/,False,True,True
+Diabetes Tests,https://medlineplus.gov/lab-tests/diabetes-tests/,False,True,True
+Diabetic Foot Exam,https://medlineplus.gov/lab-tests/diabetic-foot-exam/,False,True,True
+Doppler Ultrasound,https://medlineplus.gov/lab-tests/doppler-ultrasound/,False,True,True
+Electrocardiogram,https://medlineplus.gov/lab-tests/electrocardiogram/,False,True,True
+Drug Use Screening Tests,https://medlineplus.gov/lab-tests/drug-use-screening-tests/,False,True,True
+Drug Testing,https://medlineplus.gov/lab-tests/drug-testing/,False,True,True
+Elastography,https://medlineplus.gov/lab-tests/elastography/,False,True,True
+Dysphagia Tests,https://medlineplus.gov/lab-tests/dysphagia-tests/,False,True,True
+Electrolyte Panel,https://medlineplus.gov/lab-tests/electrolyte-panel/,False,True,True
+Epithelial Cells in Urine,https://medlineplus.gov/lab-tests/epithelial-cells-in-urine/,False,True,True
+Electromyography (EMG) and Nerve Conduction Studies,https://medlineplus.gov/lab-tests/electromyography-emg-and-nerve-conduction-studies/,False,True,True
+Erythrocyte Sedimentation Rate (ESR),https://medlineplus.gov/lab-tests/erythrocyte-sedimentation-rate-esr/,False,True,True
+Esophageal pH Test,https://medlineplus.gov/lab-tests/esophageal-ph-test/,False,True,True
+Estrogen Levels Test,https://medlineplus.gov/lab-tests/estrogen-levels-test/,False,True,True
+Fasting for a Blood Test,https://medlineplus.gov/lab-tests/fasting-for-a-blood-test/,False,True,False
+"Estrogen Receptor, Progesterone Receptor Tests",https://medlineplus.gov/lab-tests/estrogen-receptor-progesterone-receptor-tests/,False,True,True
+Fall Risk Assessment,https://medlineplus.gov/lab-tests/fall-risk-assessment/,False,True,True
+Fecal Occult Blood Test (FOBT),https://medlineplus.gov/lab-tests/fecal-occult-blood-test-fobt/,False,True,True
+Ferritin Blood Test,https://medlineplus.gov/lab-tests/ferritin-blood-test/,False,True,True
+Flu (Influenza) Test,https://medlineplus.gov/lab-tests/flu-influenza-test/,False,True,True
+Fetal Alcohol Spectrum Disorders (FASD) Screening,https://medlineplus.gov/lab-tests/fetal-alcohol-spectrum-disorders-fasd-screening/,False,True,True
+Follicle-Stimulating Hormone (FSH) Levels Test,https://medlineplus.gov/lab-tests/follicle-stimulating-hormone-fsh-levels-test/,False,True,True
+Food Allergy Testing,https://medlineplus.gov/lab-tests/food-allergy-testing/,False,True,True
+Fluoroscopy,https://medlineplus.gov/lab-tests/fluoroscopy/,False,True,True
+Fungal Culture Test,https://medlineplus.gov/lab-tests/fungal-culture-test/,False,True,True
+G6PD Test,https://medlineplus.gov/lab-tests/g6pd-test/,False,True,True
+Gamma-glutamyl Transferase (GGT) Test,https://medlineplus.gov/lab-tests/gamma-glutamyl-transferase-ggt-test/,False,True,True
+Free Light Chains,https://medlineplus.gov/lab-tests/free-light-chains/,False,True,True
+Galactosemia Tests,https://medlineplus.gov/lab-tests/galactosemia-tests/,False,True,True
+Gastric Emptying Tests,https://medlineplus.gov/lab-tests/gastric-emptying-tests/,False,True,True
+Globulin Test,https://medlineplus.gov/lab-tests/globulin-test/,False,True,True
+Glomerular Filtration Rate (GFR) Test,https://medlineplus.gov/lab-tests/glomerular-filtration-rate-gfr-test/,False,True,True
+Glaucoma Tests,https://medlineplus.gov/lab-tests/glaucoma-tests/,False,True,True
+Glucose in Urine Test,https://medlineplus.gov/lab-tests/glucose-in-urine-test/,False,True,True
+Gonorrhea Test,https://medlineplus.gov/lab-tests/gonorrhea-test/,False,True,True
+Glucagon Blood Test,https://medlineplus.gov/lab-tests/glucagon-blood-test/,False,True,True
+Growth Hormone Tests,https://medlineplus.gov/lab-tests/growth-hormone-tests/,False,True,True
+Haptoglobin (HP) Test,https://medlineplus.gov/lab-tests/haptoglobin-hp-test/,False,True,True
+Gram Stain,https://medlineplus.gov/lab-tests/gram-stain/,False,True,True
+Hearing Tests for Children,https://medlineplus.gov/lab-tests/hearing-tests-for-children/,False,True,True
+Hearing Tests for Adults,https://medlineplus.gov/lab-tests/hearing-tests-for-adults/,False,True,True
+Heavy Metal Blood Test,https://medlineplus.gov/lab-tests/heavy-metal-blood-test/,False,True,True
+Helicobacter pylori (H. pylori) Tests,https://medlineplus.gov/lab-tests/helicobacter-pylori-h-pylori-tests/,False,True,True
+Hematocrit Test,https://medlineplus.gov/lab-tests/hematocrit-test/,False,True,True
+Heart Disease Risk Assessment,https://medlineplus.gov/lab-tests/heart-disease-risk-assessment/,False,True,True
+Hemoglobin A1C (HbA1c) Test,https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/,False,True,True
+Hemoglobin Electrophoresis,https://medlineplus.gov/lab-tests/hemoglobin-electrophoresis/,False,True,True
+Hemoglobin Test,https://medlineplus.gov/lab-tests/hemoglobin-test/,False,True,True
+Hepatitis Testing,https://medlineplus.gov/lab-tests/hepatitis-testing/,False,True,True
+HER2 Tumor Marker Test,https://medlineplus.gov/lab-tests/her2-tumor-marker-test/,False,True,True
+Herpes (HSV) Test,https://medlineplus.gov/lab-tests/herpes-hsv-test/,False,True,True
+HIV Screening Test,https://medlineplus.gov/lab-tests/hiv-screening-test/,False,True,True
+HIV Viral Load,https://medlineplus.gov/lab-tests/hiv-viral-load/,False,True,True
+Homocysteine Test,https://medlineplus.gov/lab-tests/homocysteine-test/,False,True,True
+How to Cope with Medical Test Anxiety,https://medlineplus.gov/lab-tests/how-to-cope-with-medical-test-anxiety/,False,False,False
+How to Understand Your Lab Results,https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/,False,True,False
+How to Prepare for a Lab Test,https://medlineplus.gov/lab-tests/how-to-prepare-for-a-lab-test/,False,False,False
+How to Prepare Your Child for a Lab Test,https://medlineplus.gov/lab-tests/how-to-prepare-your-child-for-a-lab-test/,False,True,False
+Human Papillomavirus (HPV) Test,https://medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/,False,True,True
+Hysteroscopy,https://medlineplus.gov/lab-tests/hysteroscopy/,False,True,True
+Intravenous Pyelogram (IVP),https://medlineplus.gov/lab-tests/intravenous-pyelogram-ivp/,False,True,True
+Insulin in Blood,https://medlineplus.gov/lab-tests/insulin-in-blood/,False,True,True
+Immunoglobulins Blood Test,https://medlineplus.gov/lab-tests/immunoglobulins-blood-test/,False,True,True
+IGF-1 (Insulin-like Growth Factor 1) Test,https://medlineplus.gov/lab-tests/igf-1-insulin-like-growth-factor-1-test/,False,True,True
+Iron Tests,https://medlineplus.gov/lab-tests/iron-tests/,False,True,True
+Karyotype Genetic Test,https://medlineplus.gov/lab-tests/karyotype-genetic-test/,False,True,True
+Ketones in Blood,https://medlineplus.gov/lab-tests/ketones-in-blood/,False,True,True
+Ketones in Urine,https://medlineplus.gov/lab-tests/ketones-in-urine/,False,True,True
+Lactate Dehydrogenase (LDH) Test,https://medlineplus.gov/lab-tests/lactate-dehydrogenase-ldh-test/,False,True,True
+Lactate Test,https://medlineplus.gov/lab-tests/lactate-test/,False,True,True
+Kidney Stone Analysis,https://medlineplus.gov/lab-tests/kidney-stone-analysis/,False,True,True
+Lactate Dehydrogenase (LDH) Isoenzymes Test,https://medlineplus.gov/lab-tests/lactate-dehydrogenase-ldh-isoenzymes-test/,False,True,True
+Lactose Tolerance Tests,https://medlineplus.gov/lab-tests/lactose-tolerance-tests/,False,True,True
+Laparoscopy,https://medlineplus.gov/lab-tests/laparoscopy/,False,True,True
+Lipase Tests,https://medlineplus.gov/lab-tests/lipase-tests/,False,True,True
+Lipoprotein (a) Blood Test,https://medlineplus.gov/lab-tests/lipoprotein-a-blood-test/,False,True,True
+Liver Function Tests,https://medlineplus.gov/lab-tests/liver-function-tests/,False,True,True
+Legionella Tests,https://medlineplus.gov/lab-tests/legionella-tests/,False,True,True
+Lung Function Tests,https://medlineplus.gov/lab-tests/lung-function-tests/,False,True,True
+Luteinizing Hormone (LH) Levels Test,https://medlineplus.gov/lab-tests/luteinizing-hormone-lh-levels-test/,False,True,True
+Lung Cancer Genetic Tests,https://medlineplus.gov/lab-tests/lung-cancer-genetic-tests/,False,True,True
+Magnesium Blood Test,https://medlineplus.gov/lab-tests/magnesium-blood-test/,False,True,True
+Lyme Disease Tests,https://medlineplus.gov/lab-tests/lyme-disease-tests/,False,True,True
+Malaria Tests,https://medlineplus.gov/lab-tests/malaria-tests/,False,True,True
+MCV (Mean Corpuscular Volume),https://medlineplus.gov/lab-tests/mcv-mean-corpuscular-volume/,False,True,True
+Measles and Mumps Tests,https://medlineplus.gov/lab-tests/measles-and-mumps-tests/,False,True,True
+Meningococcal Disease Tests,https://medlineplus.gov/lab-tests/meningococcal-disease-tests/,False,True,True
+Measuring Blood Pressure,https://medlineplus.gov/lab-tests/measuring-blood-pressure/,False,True,True
+Methylmalonic Acid (MMA) Test,https://medlineplus.gov/lab-tests/methylmalonic-acid-mma-test/,False,True,True
+Mental Health Screening,https://medlineplus.gov/lab-tests/mental-health-screening/,False,True,True
+Microalbumin Creatinine Ratio,https://medlineplus.gov/lab-tests/microalbumin-creatinine-ratio/,False,True,True
+MPV Blood Test,https://medlineplus.gov/lab-tests/mpv-blood-test/,False,True,True
+Mononucleosis (Mono) Tests,https://medlineplus.gov/lab-tests/mononucleosis-mono-tests/,False,True,True
+Mucus in Urine,https://medlineplus.gov/lab-tests/mucus-in-urine/,False,True,True
+MRSA Tests,https://medlineplus.gov/lab-tests/mrsa-tests/,False,True,True
+MTHFR Gene Test,https://medlineplus.gov/lab-tests/mthfr-gene-test/,False,True,True
+Myasthenia Gravis Tests,https://medlineplus.gov/lab-tests/myasthenia-gravis-tests/,False,True,True
+Myelography,https://medlineplus.gov/lab-tests/myelography/,False,True,True
+Nasal Swab,https://medlineplus.gov/lab-tests/nasal-swab/,False,True,True
+"Natriuretic Peptide Tests (BNP, NT-proBNP)",https://medlineplus.gov/lab-tests/natriuretic-peptide-tests-bnp-nt-probnp/,False,True,True
+Nitrites in Urine,https://medlineplus.gov/lab-tests/nitrites-in-urine/,False,True,True
+Neurological Exam,https://medlineplus.gov/lab-tests/neurological-exam/,False,True,True
+Nonstress Test,https://medlineplus.gov/lab-tests/nonstress-test/,False,True,True
+Opioid Testing,https://medlineplus.gov/lab-tests/opioid-testing/,False,True,True
+Osmolality Tests,https://medlineplus.gov/lab-tests/osmolality-tests/,False,True,True
+Obesity Screening,https://medlineplus.gov/lab-tests/obesity-screening/,False,True,True
+Obsessive Compulsive Disorder (OCD) Test,https://medlineplus.gov/lab-tests/obsessive-compulsive-disorder-ocd-test/,False,True,True
+Ova and Parasite Test,https://medlineplus.gov/lab-tests/ova-and-parasite-test/,False,True,True
+Pap Smear,https://medlineplus.gov/lab-tests/pap-smear/,False,False,True
+Parathyroid Hormone (PTH) Test,https://medlineplus.gov/lab-tests/parathyroid-hormone-pth-test/,False,True,True
+Panic Disorder Test,https://medlineplus.gov/lab-tests/panic-disorder-test/,False,True,True
+Partial Thromboplastin Time (PTT) Test,https://medlineplus.gov/lab-tests/partial-thromboplastin-time-ptt-test/,False,True,True
+Parainfluenza Tests,https://medlineplus.gov/lab-tests/parainfluenza-tests/,False,True,True
+PCR Tests,https://medlineplus.gov/lab-tests/pcr-tests/,False,False,True
+PET Scan,https://medlineplus.gov/lab-tests/pet-scan/,False,True,True
+PDL1 (Immunotherapy) Tests,https://medlineplus.gov/lab-tests/pdl1-immunotherapy-tests/,False,True,True
+Pharmacogenetic Tests,https://medlineplus.gov/lab-tests/pharmacogenetic-tests/,False,True,True
+Phenylketonuria (PKU) Screening,https://medlineplus.gov/lab-tests/phenylketonuria-pku-screening/,False,True,True
+Phosphate in Blood,https://medlineplus.gov/lab-tests/phosphate-in-blood/,False,True,True
+Phosphate in Urine,https://medlineplus.gov/lab-tests/phosphate-in-urine/,False,True,True
+Pleural Fluid Analysis,https://medlineplus.gov/lab-tests/pleural-fluid-analysis/,False,True,True
+Platelet Tests,https://medlineplus.gov/lab-tests/platelet-tests/,False,True,True
+Pneumococcal Disease Tests,https://medlineplus.gov/lab-tests/pneumococcal-disease-tests/,False,True,True
+Potassium Blood Test,https://medlineplus.gov/lab-tests/potassium-blood-test/,False,True,True
+Porphyrin Tests,https://medlineplus.gov/lab-tests/porphyrin-tests/,False,True,True
+Prealbumin Blood Test,https://medlineplus.gov/lab-tests/prealbumin-blood-test/,False,True,True
+Postpartum Depression Screening,https://medlineplus.gov/lab-tests/postpartum-depression-screening/,False,True,True
+Pregnancy Test,https://medlineplus.gov/lab-tests/pregnancy-test/,False,True,True
+Procalcitonin Test,https://medlineplus.gov/lab-tests/procalcitonin-test/,False,True,True
+Prenatal Cell-Free DNA Screening,https://medlineplus.gov/lab-tests/prenatal-cell-free-dna-screening/,False,True,True
+Prostate-Specific Antigen (PSA) Test,https://medlineplus.gov/lab-tests/prostate-specific-antigen-psa-test/,False,True,True
+Protein C and Protein S Tests,https://medlineplus.gov/lab-tests/protein-c-and-protein-s-tests/,False,True,True
+Progesterone Test,https://medlineplus.gov/lab-tests/progesterone-test/,False,True,True
+Protein Electrophoresis by Immunofixation Blood Test,https://medlineplus.gov/lab-tests/protein-electrophoresis-by-immunofixation-blood-test/,False,True,True
+Prenatal Panel,https://medlineplus.gov/lab-tests/prenatal-panel/,False,True,True
+Protein in Urine,https://medlineplus.gov/lab-tests/protein-in-urine/,False,True,True
+PTEN Genetic Test,https://medlineplus.gov/lab-tests/pten-genetic-test/,False,True,True
+Prothrombin Time Test and INR (PT/INR),https://medlineplus.gov/lab-tests/prothrombin-time-test-and-inr-ptinr/,False,True,True
+Prolactin Levels,https://medlineplus.gov/lab-tests/prolactin-levels/,False,True,True
+Pulse Oximetry,https://medlineplus.gov/lab-tests/pulse-oximetry/,False,True,True
+Rapid Tests,https://medlineplus.gov/lab-tests/rapid-tests/,False,False,False
+Rash Evaluation,https://medlineplus.gov/lab-tests/rash-evaluation/,False,True,True
+Red Blood Cell (RBC) Indices,https://medlineplus.gov/lab-tests/red-blood-cell-rbc-indices/,False,True,True
+RDW (Red Cell Distribution Width),https://medlineplus.gov/lab-tests/rdw-red-cell-distribution-width/,False,True,True
+Red Blood Cell (RBC) Count,https://medlineplus.gov/lab-tests/red-blood-cell-rbc-count/,False,True,True
+Red Blood Cell Antibody Screen,https://medlineplus.gov/lab-tests/red-blood-cell-antibody-screen/,False,True,True
+Respiratory Pathogens Panel,https://medlineplus.gov/lab-tests/respiratory-pathogens-panel/,False,True,True
+Reticulocyte Count,https://medlineplus.gov/lab-tests/reticulocyte-count/,False,True,True
+Renin Test,https://medlineplus.gov/lab-tests/renin-test/,False,True,True
+Respiratory Syncytial Virus (RSV) Tests,https://medlineplus.gov/lab-tests/respiratory-syncytial-virus-rsv-tests/,False,True,True
+Rheumatoid Factor (RF) Test,https://medlineplus.gov/lab-tests/rheumatoid-factor-rf-test/,False,True,True
+Semen Analysis,https://medlineplus.gov/lab-tests/semen-analysis/,False,True,True
+Sexually Transmitted Infection (STI) Tests,https://medlineplus.gov/lab-tests/sexually-transmitted-infection-sti-tests/,False,True,True
+Sentinel Lymph Node Biopsy,https://medlineplus.gov/lab-tests/sentinel-lymph-node-biopsy/,False,True,True
+Salicylates Level,https://medlineplus.gov/lab-tests/salicylates-level/,False,True,True
+Skin Biopsy,https://medlineplus.gov/lab-tests/skin-biopsy/,False,True,True
+SHBG Blood Test,https://medlineplus.gov/lab-tests/shbg-blood-test/,False,True,True
+Skin Cancer Screening,https://medlineplus.gov/lab-tests/skin-cancer-screening/,False,True,True
+Sleep Study,https://medlineplus.gov/lab-tests/sleep-study/,False,True,True
+Smooth Muscle Antibody (SMA) Test,https://medlineplus.gov/lab-tests/smooth-muscle-antibody-sma-test/,False,True,True
+Sputum Culture,https://medlineplus.gov/lab-tests/sputum-culture/,False,True,True
+Sodium Blood Test,https://medlineplus.gov/lab-tests/sodium-blood-test/,False,True,True
+Stool Elastase,https://medlineplus.gov/lab-tests/stool-elastase/,False,True,True
+Strep A Test,https://medlineplus.gov/lab-tests/strep-a-test/,False,True,True
+Strep B Test,https://medlineplus.gov/lab-tests/strep-b-test/,False,True,True
+Suicide Risk Screening,https://medlineplus.gov/lab-tests/suicide-risk-screening/,False,True,True
+Sweat Test for Cystic Fibrosis,https://medlineplus.gov/lab-tests/sweat-test-for-cystic-fibrosis/,False,True,True
+Stress Tests,https://medlineplus.gov/lab-tests/stress-tests/,False,True,True
+Synovial Fluid Analysis,https://medlineplus.gov/lab-tests/synovial-fluid-analysis/,False,True,True
+Thyroglobulin,https://medlineplus.gov/lab-tests/thyroglobulin/,False,True,True
+Testosterone Levels Test,https://medlineplus.gov/lab-tests/testosterone-levels-test/,False,True,True
+Therapeutic Drug Monitoring,https://medlineplus.gov/lab-tests/therapeutic-drug-monitoring/,False,True,True
+Syphilis Tests,https://medlineplus.gov/lab-tests/syphilis-tests/,False,True,True
+Thyroid Antibodies,https://medlineplus.gov/lab-tests/thyroid-antibodies/,False,True,True
+Tricyclic Antidepressant (TCA) Screen,https://medlineplus.gov/lab-tests/tricyclic-antidepressant-tca-screen/,False,True,True
+Trichomoniasis Test,https://medlineplus.gov/lab-tests/trichomoniasis-test/,False,True,True
+Thyroxine (T4) Test,https://medlineplus.gov/lab-tests/thyroxine-t4-test/,False,True,True
+Total Protein and Albumin/Globulin (A/G) Ratio,https://medlineplus.gov/lab-tests/total-protein-and-albumin-globulin-a-g-ratio/,False,True,True
+TP53 Genetic Test,https://medlineplus.gov/lab-tests/tp53-genetic-test/,False,True,True
+Triglycerides Test,https://medlineplus.gov/lab-tests/triglycerides-test/,False,True,True
+Triiodothyronine (T3) Tests,https://medlineplus.gov/lab-tests/triiodothyronine-t3-tests/,False,True,True
+Troponin Test,https://medlineplus.gov/lab-tests/troponin-test/,False,True,True
+TSH (Thyroid-stimulating hormone) Test,https://medlineplus.gov/lab-tests/tsh-thyroid-stimulating-hormone-test/,False,True,True
+Tuberculosis Screening,https://medlineplus.gov/lab-tests/tuberculosis-screening/,False,True,True
+Tumor Marker Tests,https://medlineplus.gov/lab-tests/tumor-marker-tests/,False,True,True
+Urobilinogen in Urine,https://medlineplus.gov/lab-tests/urobilinogen-in-urine/,False,True,True
+Ultrasound,https://medlineplus.gov/lab-tests/sonogram/,False,True,True
+Uric Acid Test,https://medlineplus.gov/lab-tests/uric-acid-test/,False,True,True
+Vitamin B Test,https://medlineplus.gov/lab-tests/vitamin-b-test/,False,True,True
+Videonystagmography (VNG),https://medlineplus.gov/lab-tests/videonystagmography-vng/,False,True,True
+Vision Screening,https://medlineplus.gov/lab-tests/vision-screening/,False,True,True
+V/Q Scan,https://medlineplus.gov/lab-tests/vq-scan/,False,True,True
+Vitamin D Test,https://medlineplus.gov/lab-tests/vitamin-d-test/,False,True,True
+What You Need to Know About Blood Testing,https://medlineplus.gov/lab-tests/what-you-need-to-know-about-blood-testing/,False,False,True
+White Blood Count (WBC),https://medlineplus.gov/lab-tests/white-blood-count-wbc/,False,True,True
+Whooping Cough Tests,https://medlineplus.gov/lab-tests/whooping-cough-diagnosis/,False,True,True
+Vitamin E (Tocopherol) Test,https://medlineplus.gov/lab-tests/vitamin-e-tocopherol-test/,False,True,True
+White Blood Cell (WBC) in Stool,https://medlineplus.gov/lab-tests/white-blood-cell-wbc-in-stool/,False,True,True
+17-Hydroxyprogesterone,https://medlineplus.gov/lab-tests/17-hydroxyprogesterone/,False,True,True
+Xylose Testing,https://medlineplus.gov/lab-tests/xylose-testing/,False,True,True
+Acetaminophen Level,https://medlineplus.gov/lab-tests/acetaminophen-level/,False,True,True
+ADHD Screening,https://medlineplus.gov/lab-tests/adhd-screening/,False,True,True
+Acid-Fast Bacillus (AFB) Tests,https://medlineplus.gov/lab-tests/acid-fast-bacillus-afb-tests/,False,True,True
+Albumin Blood Test,https://medlineplus.gov/lab-tests/albumin-blood-test/,False,True,True
+Adrenocorticotropic Hormone (ACTH),https://medlineplus.gov/lab-tests/adrenocorticotropic-hormone-acth/,False,True,True
+Aldosterone Test,https://medlineplus.gov/lab-tests/aldosterone-test/,False,True,True
+Alcohol Use Screening Tests,https://medlineplus.gov/lab-tests/alcohol-use-screening-tests/,False,True,True
+Allergy Skin Test,https://medlineplus.gov/lab-tests/allergy-skin-test/,False,True,True
+Alkaline Phosphatase,https://medlineplus.gov/lab-tests/alkaline-phosphatase/,False,True,True
+Allergy Blood Test,https://medlineplus.gov/lab-tests/allergy-blood-test/,False,True,True
+Alpha Fetoprotein (AFP) Tumor Marker Test,https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-tumor-marker-test/,False,True,True
+Alpha-1 Antitrypsin Testing,https://medlineplus.gov/lab-tests/alpha-1-antitrypsin-testing/,False,True,True
+Alpha-Fetoprotein (AFP) Test,https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-test/,False,True,True
+ALT Blood Test,https://medlineplus.gov/lab-tests/alt-blood-test/,False,True,True
+Ammonia Levels,https://medlineplus.gov/lab-tests/ammonia-levels/,False,True,True
+Amniocentesis (amniotic fluid test),https://medlineplus.gov/lab-tests/amniocentesis-amniotic-fluid-test/,False,True,True
+ANA (Antinuclear Antibody) Test,https://medlineplus.gov/lab-tests/ana-antinuclear-antibody-test/,False,True,True
+Amylase Test,https://medlineplus.gov/lab-tests/amylase-test/,False,True,True
+Anion Gap Blood Test,https://medlineplus.gov/lab-tests/anion-gap-blood-test/,False,True,True
+Anoscopy,https://medlineplus.gov/lab-tests/anoscopy/,False,True,True
+Antibiotic Sensitivity Test,https://medlineplus.gov/lab-tests/antibiotic-sensitivity-test/,False,True,True
+Anti-MÃ¼llerian Hormone Test,https://medlineplus.gov/lab-tests/anti-mullerian-hormone-test/,False,True,True
+Antineutrophil Cytoplasmic Antibodies (ANCA) Test,https://medlineplus.gov/lab-tests/antineutrophil-cytoplasmic-antibodies-anca-test/,False,True,True
+Antibody Serology Tests,https://medlineplus.gov/lab-tests/antibody-serology-tests/,False,True,True
+Appendicitis Tests,https://medlineplus.gov/lab-tests/appendicitis-tests/,False,True,True
+AST Test,https://medlineplus.gov/lab-tests/ast-test/,False,True,True
+Arterial Blood Gas (ABG) Test,https://medlineplus.gov/lab-tests/arterial-blood-gas-abg-test/,False,True,True
+At-Home Medical Tests,https://medlineplus.gov/lab-tests/at-home-medical-tests/,False,False,False
+Autoantibody Testing,https://medlineplus.gov/lab-tests/autoantibody-testing/,False,True,True
+Autism Spectrum Disorder (ASD) Screening,https://medlineplus.gov/lab-tests/autism-spectrum-disorder-asd-screening/,False,True,True
+Autonomic Testing,https://medlineplus.gov/lab-tests/autonomic-testing/,False,True,True
+Bacteria Culture Test,https://medlineplus.gov/lab-tests/bacteria-culture-test/,False,True,True
+Bacterial Vaginosis Test,https://medlineplus.gov/lab-tests/bacterial-vaginosis-test/,False,True,True
+Balance Tests,https://medlineplus.gov/lab-tests/balance-tests/,False,True,True
+Barium Swallow,https://medlineplus.gov/lab-tests/barium-swallow/,False,True,True
+Basic Metabolic Panel (BMP),https://medlineplus.gov/lab-tests/basic-metabolic-panel-bmp/,False,True,True
+Beta 2 Microglobulin (B2M) Tumor Marker Test,https://medlineplus.gov/lab-tests/beta-2-microglobulin-b2m-tumor-marker-test/,False,True,True
+Bilirubin Blood Test,https://medlineplus.gov/lab-tests/bilirubin-blood-test/,False,True,True
+BCR-ABL1 Genetic Test,https://medlineplus.gov/lab-tests/bcr-abl1-genetic-test/,False,True,True
+Blood Alcohol Level,https://medlineplus.gov/lab-tests/blood-alcohol-level/,False,True,True
+Blood Differential,https://medlineplus.gov/lab-tests/blood-differential/,False,True,True
+Bilirubin in Urine,https://medlineplus.gov/lab-tests/bilirubin-in-urine/,False,True,True
+Blood Glucose Test,https://medlineplus.gov/lab-tests/blood-glucose-test/,False,True,True
+Blood in Urine,https://medlineplus.gov/lab-tests/blood-in-urine/,False,True,True
+Blood Smear,https://medlineplus.gov/lab-tests/blood-smear/,False,True,True
+Bone Density Scan,https://medlineplus.gov/lab-tests/bone-density-scan/,False,True,True
+Bone Marrow Tests,https://medlineplus.gov/lab-tests/bone-marrow-tests/,False,True,True
+BRAF Genetic Test,https://medlineplus.gov/lab-tests/braf-genetic-test/,False,True,True
+BRCA Genetic Test,https://medlineplus.gov/lab-tests/brca-test/,False,True,True
+Breast Biopsy,https://medlineplus.gov/lab-tests/breast-biopsy/,False,True,True

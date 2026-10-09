@@ -1,0 +1,96 @@
+"""
+Full voice pipeline for the rural health assistant.
+
+Flow:
+    Microphone (speech) -> voice_input_agent (STT)
+                         -> symptom_mapper (Hindi/Hinglish -> English term)
+                         -> medlineplus_fetch (retrieval agent)
+                         -> safety_layer (emergency check + disclaimer)
+                         -> translation_agent (translate into user's language)
+                         -> voice_output_agent (TTS, speaks the answer back)
+
+Usage:
+    python voice_pipeline.py
+    (You'll be asked to pick a language, then asked to speak your symptom.)
+"""
+
+import json
+import sys
+
+from voice_input_agent import listen_from_microphone, LANGUAGE_CODES
+from symptom_mapper import map_symptom
+from medlineplus_fetch import fetch_raw_xml, parse_results
+from safety_layer import apply_safety_layer
+from translation_agent import translate_pipeline_output, prompt_language_choice
+from voice_output_agent import speak_text
+
+
+def run_voice_pipeline():
+    # Step 1: Ask the user which language they will speak and want the reply in
+    lang_code = prompt_language_choice()
+
+    # Step 2: Listen to the user's symptom description
+    user_text = listen_from_microphone(lang_code=lang_code)
+    if not user_text:
+        print("Kuch samajh nahi aaya. Kripya dobara try karein.", file=sys.stderr)
+        return
+
+    # Step 3: Map the symptom to an English MedlinePlus search term
+    term = map_symptom(user_text)
+    if term is None:
+        message = (
+            "Is symptom ko pehchana nahi ja saka. Kripya alag shabdon mein bataein."
+        )
+        print(message, file=sys.stderr)
+        speak_text(message, lang_code=lang_code, output_path="response.mp3")
+        return
+
+    print(f"Matched term: '{term}'", file=sys.stderr)
+
+    # Step 4: Fetch info from MedlinePlus (always search the English database)
+    try:
+        xml_text = fetch_raw_xml(term, db="healthTopics", retmax=3)
+    except RuntimeError as e:
+        message = f"Data laane mein error aayi: {e}"
+        print(message, file=sys.stderr)
+        speak_text(message, lang_code=lang_code, output_path="response.mp3")
+        return
+
+    results = parse_results(xml_text)
+
+    output = {
+        "status": "ok",
+        "user_text": user_text,
+        "matched_term": term,
+        "results": results,
+    }
+
+    # Step 5: Apply the safety layer (emergency check + disclaimer)
+    output = apply_safety_layer(user_text, output)
+
+    # Step 6: Translate everything into the user's chosen language
+    if lang_code != "en":
+        output = translate_pipeline_output(output, target_lang=lang_code)
+
+    # Print the full structured result for debugging/logging
+    print(json.dumps(output, ensure_ascii=False, indent=2))
+
+    # Step 7: Build a short spoken summary and speak it back
+    # (We don't read out the entire long FullSummary out loud — just the
+    # most relevant top result's snippet, plus any safety message.)
+    spoken_parts = []
+    if output.get("safety_message"):
+        spoken_parts.append(output["safety_message"])
+    if output.get("results"):
+        top_result = output["results"][0]
+        spoken_parts.append(top_result.get("title", ""))
+        spoken_parts.append(top_result.get("snippet", ""))
+    if output.get("disclaimer"):
+        spoken_parts.append(output["disclaimer"])
+
+    spoken_text = " ... ".join(part for part in spoken_parts if part)
+    speak_text(spoken_text, lang_code=lang_code, output_path="response.mp3")
+
+
+if __name__ == "__main__":
+    run_voice_pipeline()
