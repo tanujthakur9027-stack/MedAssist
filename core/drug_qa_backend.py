@@ -8,10 +8,14 @@ import os
 import re
 from typing import List, Dict, Optional
 
+import requests
+
 
 class DrugQABackend:
     def __init__(self, data_path=None):
         self.drugs = []
+        self.last_error = None
+        self._api_cache = {}
         self._load_data(data_path)
 
     def _load_data(self, path=None):
@@ -171,8 +175,60 @@ class DrugQABackend:
         # DEBUG
         print(f"[DrugQA] Query: '{q}' | Matches: {len(scored)} | Top 5 scores: {[s[0] for s in scored[:5]]}")
         print(f"[DrugQA] Top 5 names: {[self._get_name(s[1]) for s in scored[:5]]}")
-        
-        return [x[1] for x in scored[:top_n]]
+
+        if scored:
+            self.last_error = None
+            return [x[1] for x in scored[:top_n]]
+        return self._search_openfda(query, top_n)
+
+    def _search_openfda(self, query: str, top_n: int) -> List[Dict]:
+        normalized = re.sub(r"[^a-z0-9 -]", " ", query.lower())
+        normalized = " ".join(normalized.split())
+        if not normalized or len(normalized) > 80:
+            return []
+
+        stop_words = {
+            "a", "an", "can", "for", "help", "i", "is", "me", "medicine",
+            "medicines", "medication", "medications", "my", "of", "should",
+            "take", "the", "to", "treat", "treatment", "used", "what", "which",
+            "with",
+        }
+        search_terms = [term for term in normalized.split() if term not in stop_words]
+        if search_terms:
+            normalized = " ".join(search_terms)
+
+        aliases = {"paracetamol": "acetaminophen"}
+        normalized = aliases.get(normalized, normalized)
+        if normalized in self._api_cache:
+            return self._api_cache[normalized][:top_n]
+
+        fields = (
+            "openfda.generic_name",
+            "openfda.brand_name",
+            "openfda.substance_name",
+            "indications_and_usage",
+            "purpose",
+        )
+        search = " OR ".join(f'{field}:"{normalized}"' for field in fields)
+        try:
+            response = requests.get(
+                "https://api.fda.gov/drug/label.json",
+                params={"search": search, "limit": top_n},
+                timeout=12,
+            )
+            if response.status_code == 404:
+                self.last_error = None
+                self._api_cache[normalized] = []
+                return []
+            response.raise_for_status()
+            results = response.json().get("results", [])
+            self.last_error = None
+            self._api_cache[normalized] = results
+            return results
+        except (requests.RequestException, ValueError) as exc:
+            self.last_error = str(exc)
+            print(f"[DrugQA] OpenFDA request failed: {exc}")
+            return []
 
     def get_by_name(self, name: str) -> Optional[Dict]:
         if not name:
@@ -182,4 +238,5 @@ class DrugQABackend:
             d_name = self._get_name(drug)
             if d_name and (name_lower in d_name.lower() or d_name.lower() in name_lower):
                 return drug
-        return None
+        results = self._search_openfda(name, 1)
+        return results[0] if results else None

@@ -89,51 +89,74 @@ class DiseaseInfoRetriever:
         self._embedder = None
         self._chroma_path = None
         self._collection_name = None
+        self._health_topics = None
+        self._connected = False
 
     def _connect(self):
-        if self._collection is not None:
+        if self._connected:
             return
 
         env_path = os.environ.get("CHROMA_DB_PATH")
-        if env_path and os.path.exists(env_path):
-            self._chroma_path = env_path
-        else:
-            for path in _CHROMA_PATHS:
-                if os.path.exists(path):
-                    self._chroma_path = os.path.abspath(path)
-                    break
+        paths = [env_path] if env_path else []
+        paths.extend(_CHROMA_PATHS)
+        health_topics_path = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)), "data", "health_topics.json"
+        )
+        preferred = [
+            "medlineplus_health",
+            "medlineplus_topics",
+            "health_topics",
+            "medlineplus",
+        ]
+        fallback_collection = None
 
-        if not self._chroma_path:
-            raise RuntimeError(f"ChromaDB not found. Searched: {_CHROMA_PATHS}")
-
-        try:
-            self._client = chromadb.PersistentClient(
-                path=self._chroma_path,
+        for path in dict.fromkeys(os.path.abspath(p) for p in paths if p and os.path.exists(p)):
+            client = chromadb.PersistentClient(
+                path=path,
                 settings=Settings(anonymized_telemetry=False)
             )
-        except Exception as e:
-            err_msg = str(e).lower()
-            if "already exists" in err_msg or "different settings" in err_msg:
-                self._client = chromadb.PersistentClient(path=self._chroma_path)
-            else:
-                raise
+            collections = client.list_collections()
+            by_name = {collection.name: collection for collection in collections}
 
-        collections = self._client.list_collections()
-        if not collections:
-            raise RuntimeError(f"No collections found in {self._chroma_path}")
+            for name in preferred:
+                collection = by_name.get(name)
+                if collection and collection.count():
+                    self._client = client
+                    self._chroma_path = path
+                    self._collection_name = name
+                    self._collection = collection
+                    break
 
-        preferred = ["medassist_rag", "medlineplus_topics", "medlineplus_health", "health_topics", "medlineplus"]
-        for name in preferred:
-            if any(c.name == name for c in collections):
-                self._collection_name = name
+            if self._collection is not None:
                 break
 
-        if not self._collection_name:
-            self._collection_name = collections[0].name
+            if fallback_collection is None and not os.path.isfile(health_topics_path):
+                fallback_collection = next(
+                    (collection for collection in collections if collection.count()),
+                    None,
+                )
+                if fallback_collection is not None:
+                    self._client = client
+                    self._chroma_path = path
 
-        self._collection = self._client.get_collection(name=self._collection_name)
-        doc_count = self._collection.count()
-        print(f"[DiseaseInfo] Path: {self._chroma_path} | Collection: {self._collection_name} | Docs: {doc_count}")
+        if self._collection is None and fallback_collection is not None:
+            self._collection = fallback_collection
+            self._collection_name = fallback_collection.name
+
+        if self._collection is None and not os.path.isfile(health_topics_path):
+            raise RuntimeError(
+                f"No populated MedlinePlus ChromaDB collection or health_topics.json found. "
+                f"Searched: {paths}"
+            )
+
+        if self._collection is not None:
+            print(
+                f"[DiseaseInfo] Path: {self._chroma_path} | "
+                f"Collection: {self._collection_name} | Docs: {self._collection.count()}"
+            )
+        else:
+            print("[DiseaseInfo] Using keyword search from data/health_topics.json")
+        self._connected = True
 
     def _get_embedder(self):
         if self._embedder is None:
@@ -205,6 +228,9 @@ class DiseaseInfoRetriever:
 
     def search_disease(self, disease_name: str) -> List[Dict]:
         self._connect()
+        if self._collection is None:
+            return self._keyword_search(disease_name)
+
         doc_count = self._collection.count()
         print(f"[DEBUG] Total documents: {doc_count}")
 
@@ -295,6 +321,55 @@ class DiseaseInfoRetriever:
         return documents
 
     def _keyword_search(self, disease_name: str, limit: int = 10) -> List[Dict]:
+        if self._collection is None:
+            if self._health_topics is None:
+                data_path = os.path.join(
+                    os.path.dirname(os.path.dirname(__file__)),
+                    "data",
+                    "health_topics.json",
+                )
+                with open(data_path, "r", encoding="utf-8") as data_file:
+                    self._health_topics = json.load(data_file).get("topics", [])
+
+            query_terms = set(re.findall(r"[a-z0-9]+", disease_name.lower()))
+            scored_topics = []
+            for topic in self._health_topics:
+                title = str(topic.get("title", ""))
+                aliases = topic.get("also_called", [])
+                if isinstance(aliases, str):
+                    aliases = [aliases]
+                alias_text = " ".join(str(alias) for alias in aliases)
+                summary = str(topic.get("summary", ""))
+                sections = topic.get("sections", [])
+                section_text = " ".join(
+                    f"{section.get('title', '')}: {section.get('content', '')}"
+                    for section in sections
+                    if isinstance(section, dict)
+                )
+                content = " ".join(part for part in (summary, section_text) if part)
+                title_lower = title.lower()
+                aliases_lower = alias_text.lower()
+                content_lower = content.lower()
+                score = sum(10 for term in query_terms if term in title_lower)
+                score += sum(8 for term in query_terms if term in aliases_lower)
+                score += sum(2 for term in query_terms if term in content_lower)
+
+                if score:
+                    scored_topics.append((score, topic, content))
+
+            scored_topics.sort(key=lambda item: item[0], reverse=True)
+            return [
+                {
+                    "content": content,
+                    "title": topic.get("title", "Unknown"),
+                    "url": topic.get("url", ""),
+                    "distance": 0.5,
+                    "related_topics": [],
+                    "summary_text": content,
+                }
+                for _, topic, content in scored_topics[:limit]
+            ]
+
         try:
             all_data = self._collection.get(include=["documents", "metadatas"])
             docs = all_data.get("documents", []) or []

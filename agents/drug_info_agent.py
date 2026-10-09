@@ -95,12 +95,26 @@ class DrugInfoAgent:
             drug = self.backend.get_by_name(query)
             if drug:
                 return self._format_direct(drug, query)
+            if self.backend.last_error:
+                return {
+                    "type": "error",
+                    "query": query,
+                    "drugs": [],
+                    "message": "The FDA drug-information service could not be reached. Please try again shortly.",
+                }
 
         # CASE 2: Natural language question
         results = self.backend.search(query, top_n=10)
         print(f"[DrugAgent] Backend returned {len(results)} drugs")
         
         if not results:
+            if self.backend.last_error:
+                return {
+                    "type": "error",
+                    "query": query,
+                    "drugs": [],
+                    "message": "The FDA drug-information service could not be reached. Please try again shortly.",
+                }
             return {
                 "type": "not_found",
                 "query": query,

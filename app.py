@@ -15,6 +15,7 @@ from datetime import datetime
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 import streamlit as st
+from streamlit.errors import StreamlitSecretNotFoundError
 from PIL import Image
 
 try:
@@ -198,6 +199,15 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+try:
+    streamlit_secrets = st.secrets
+except StreamlitSecretNotFoundError:
+    streamlit_secrets = {}
+
+for secret_name in ("GROQ_API_KEY", "GEMINI_API_KEY", "LLM_PROVIDER", "DEFAULT_LLM_PROVIDER"):
+    if secret_name not in os.environ and secret_name in streamlit_secrets:
+        os.environ[secret_name] = str(streamlit_secrets[secret_name])
 
 # Handle query params for test selection
 query_params = st.query_params

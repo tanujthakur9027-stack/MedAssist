@@ -233,6 +233,27 @@ The application will be available at **http://localhost:8501**
 
 ---
 
+## Deploying on Streamlit Community Cloud
+
+1. Push this repository to GitHub and create a new app in Streamlit Community Cloud.
+2. Select the repository's `main` branch and set the app file to `app.py`.
+3. Add the following values in the app's **Settings → Secrets**:
+
+```toml
+GROQ_API_KEY = "your_groq_api_key"
+GEMINI_API_KEY = "your_gemini_api_key"
+LLM_PROVIDER = "groq"
+```
+
+`GEMINI_API_KEY` is optional when using Groq. Keep real API keys out of GitHub.
+Disease lookup uses `data/health_topics.json` as a keyword-search fallback when a
+populated MedlinePlus ChromaDB collection is unavailable. Drug lookup can query
+the public openFDA API when the local FDA bulk data file is not present. Image OCR
+still requires the Tesseract system application, which Streamlit Community Cloud
+does not install by default.
+
+---
+
 ## 📖 Usage
 
 ### Disease Information
